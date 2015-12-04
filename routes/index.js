@@ -23,6 +23,7 @@ router.post('/location', function (req, res, next) {
     var time = (time2 - time1) / 1000 / 60 / 60;
     var speed = haversineDistance(coord1, coord2) / time;
     var direction = vehicleBearing(coord1, coord2);
+    if (speed < 5) speed=0; //not moving most likely
     res.status(200).send({
       speed: Math.round(speed*100)/100,
       direction: direction
