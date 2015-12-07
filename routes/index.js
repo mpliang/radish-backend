@@ -66,8 +66,8 @@ function haversineDistance(coords1, coords2) {
   return d;
 }
 
-function vehicleBearing(endPoint, startPoint) {
-
+function vehicleBearing(startPoint, endPoint) {
+  console.log();
   var lat1 = parseFloat(endPoint.split(', ')[0]);
   var lon1 = parseFloat(endPoint.split(', ')[1]);
 
